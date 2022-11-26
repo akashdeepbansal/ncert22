@@ -1,0 +1,63 @@
+1
+00:00:04,940 --> 00:00:08,538
+Hello everyone, my name is Akash Bansal and today I'm
+
+2
+00:00:08,606 --> 00:00:13,291
+going to be talking about developing accessible digital resources for
+
+3
+00:00:13,358 --> 00:00:15,259
+children with special needs.
+
+4
+00:00:18,500 --> 00:00:25,227
+So first we're going to talk about overview and before
+
+5
+00:00:25,351 --> 00:00:30,957
+that let me share the slides with you. So the
+
+6
+00:00:31,082 --> 00:00:38,183
+slides of the session are available at HTTPS: slash slash
+
+7
+00:00:38,307 --> 00:00:45,657
+Akashdeep Branson AKA SH DEPBANSAL dot GitHub GITHUP dot IO
+
+8
+00:00:45,782 --> 00:00:46,530
+slash.
+
+9
+00:00:46,620 --> 00:00:50,480
+NCERT 22 slash OK.
+
+10
+00:00:52,000 --> 00:00:54,949
+Your session with the session could slide up in the
+
+11
+00:00:55,007 --> 00:00:58,014
+system before you want to be the wrong. Maybe update
+
+12
+00:00:58,072 --> 00:00:58,940
+this user here.
+
+13
+00:01:00,420 --> 00:01:04,068
+OK, configuration to you like you want high contrast mode
+
+14
+00:01:04,131 --> 00:01:05,859
+or something like that, so.
+
+15
+00:01:08,240 --> 00:01:11,490
+One correct answer that you can follow along with me.
+
+16
+00:01:12,480 --> 00:01:12,820
+OK.

@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="pandoc" name="generator"/>
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+  <style>
+   html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+1
+     </span>
+    </span>
+   </h6>
+  </section>
+  <h1 id="a0f01db9">
+   <span id="061f447c">
+    Locating Mathematical Definitions
+in a Document
+   </span>
+  </h1>
+  <p>
+   <span id="b79494c2">
+    Akashdeep Bansal&lowast;1 , Pawan Kumar&dagger;1 , Volker
+Sorge&Dagger;2 , and M Balakrishnan&sect;1
+   </span>
+  </p>
+  <h1 id="657dd2e5">
+   <span id="6c53a1b2">
+    Abstract
+   </span>
+  </h1>
+  <p>
+   <span id="d9e25c9a">
+    At present STEM education beyond middle school is
+inaccessible to visually impaired students in countries like India. A
+few exceptions can be traced to enormous efforts of the parents in
+working with these students to make STEM text material accessible.
+Access to equations, tables, charts and figures are the key bottleneck.
+With the increased penetration of screen reading software, effective
+audio rendering of equations can significantly help in making many of
+the e-texts accessible. Unfortunately, linear syntactic rendering of
+equations can create considerable cognitive load even for relatively
+simple equations. In this work we plan to address an important aspect
+for making mathematical subjects accessible. It is related to contextual
+rendering of equations based on the subject of the document as well as
+local definitions. We are working on a classifier-cum-locator which can
+identify the mathematical definitions in a document. This will help in
+adapting audio rendering of equations based on their contextual
+semantics.
+   </span>
+  </p>
+  <h1 id="1e1c4d19">
+   <span id="c1ac559a">
+    1 Introduction and Motivation
+   </span>
+  </h1>
+  <p>
+   <span id="4f9a7bc0">
+    Despite significant advances in assistive
+technologies, a large section of visually impaired students, especially
+in developing countries like India, are not able to pursue STEM subjects
+in senior school years and college. Inaccessible STEM content including
+textbooks contribute in a major way to this challenge. Clearly when
+significant employment opportunities depend upon STEM education, this
+has a huge impact on their employability and integration into society.
+   </span>
+  </p>
+  <p>
+   <span id="113dbaa2">
+    Access to equations is a critical requirement for
+STEM. Audio rendering and tactile Braille are the two main modalities
+used by persons with visual impairment for accessing equations. Audio is
+the preferred modality due to ease and cost of production, possibility
+of digital dissemination as well as having no need for specially trained
+instructors to teach Braille/Tactile Graphics. MathJax [
+   </span>
+   <a href="#38958ee1" id="300fff7c">
+    <span id="5e4a479a">
+     5
+    </span>
+   </a>
+   <span id="054f8333">
+    ,
+   </span>
+   <a href="#2f3034bf" id="8f0436db">
+    <span id="04638f49">
+     6
+    </span>
+   </a>
+   <span id="95e3b22f">
+    ], MathPlayer [
+   </span>
+   <a href="#8f7f470f" id="47520766">
+    <span id="d8cafd6d">
+     12
+    </span>
+   </a>
+   <span id="d0dd715d">
+    ,
+   </span>
+   <a href="#3e8d1845" id="0097c97c">
+    <span id="ffe0160c">
+     8
+    </span>
+   </a>
+   <span id="c9b31445">
+    ], ChattyInfty [
+   </span>
+   <a href="#9682948e" id="1c1abe1f">
+    <span id="ce0ee49a">
+     9
+    </span>
+   </a>
+   <span id="bb44cca1">
+    ,
+   </span>
+   <a href="#64239a61" id="351984b0">
+    <span id="c23a34a5">
+     18
+    </span>
+   </a>
+   <span id="1f1c32de">
+    ],
+etc. are some of the common tools used for accessing equations using
+audio. All these solutions provide syntactical audio rendering with
+optimized use of lexical and prosodic cues. None of these solutions have
+the capability of adapting the rendering on the basis of the contextual
+semantics. For example, AT can be &ldquo;the transpose of the matrix A&rdquo; or &ldquo;A
+to the power T&rdquo; depending on the context whether A is a matrix or a
+variable, respectively. Current systems will always read it as &ldquo;A
+superscript T&rdquo;, which is a syntactical rendering.
+   </span>
+  </p>
+  <p>
+   <span id="2547283e">
+    Lack of contextual rendering adds cognitive load
+and leads to the steepness in the learning curve for users using audio
+rendering. Another key contributor is linearization of the long and
+complex equations to render it through a linear interface such as audio
+[
+   </span>
+   <a href="#b6ca0359" id="e10946d6">
+    <span id="a5100fc3">
+     3
+    </span>
+   </a>
+   <span id="00f9d342">
+    ]. We are already working on a solution
+for effective delivery of long and complex equations [
+   </span>
+   <a href="#7bfd1885" id="8fa3c083">
+    <span id="702dbf2f">
+     4
+    </span>
+   </a>
+   <span id="558cc156">
+    ]. To achieve this we first convert eBorn PDFs into ePub [
+   </span>
+   <a href="#fa011f4a" id="1429d521">
+    <span id="f63c2ec3">
+     14
+    </span>
+   </a>
+   <span id="73b6c4fe">
+    ,
+   </span>
+   <a href="#8674be2a" id="d3d1e7ae">
+    <span id="6eec4a55">
+     13
+    </span>
+   </a>
+   <span id="c4343a23">
+    ]
+and based on a complexity metric decompose equations dynamically when
+rendering.
+   </span>
+  </p>
+  <p>
+   <span id="467f8c68">
+    In this work, we are focusing on contextually
+improved voicing of equations by locating and interpreting mathematical
+definitions in documents. Mathematical definitions are those phrases
+that assign mathematical
+   </span>
+  </p>
+  <h6>
+   <span id="footnote_header">
+    <span id="footnote_header">
+     Footnote
+Start
+    </span>
+   </span>
+  </h6>
+  <ul>
+   <li>
+    <span id="9eac66cf">
+     [1Indian] Institute of Technology Delhi, India
+    </span>
+   </li>
+   <li>
+    <span id="5e658a9f">
+     [2University] of Birmingham, United Kingdom
+    </span>
+   </li>
+   <li>
+    <span id="dfceb5b0">
+     &lowast;akashdeep@cse.iitd.ac.in
+    </span>
+   </li>
+   <li>
+    <span id="0d41176f">
+     &dagger;pawan.kumar@cse.iitd.ac.in
+    </span>
+   </li>
+   <li>
+    <span id="5f4f3d38">
+     &Dagger;v.sorge@cs.bham.ac.uk
+    </span>
+   </li>
+   <li>
+    <span id="88f52d43">
+     &sect;mbala@cse.iitd.ac.in
+    </span>
+   </li>
+  </ul>
+  <h6>
+   <span id="footnote_header">
+    <span id="footnote_header">
+     Footnote
+End
+    </span>
+   </span>
+  </h6>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+2
+     </span>
+    </span>
+   </h6>
+  </section>
+  <p>
+   <span id="af56720b">
+    properties to symbols used in subsequent text.
+For example, &rdquo;Let F : Rn &rarr; Rn be a C1-vector field&rdquo; defines F to be a
+C1-vector field. Unfortunately, definitions are only rarely given in
+such obvious manner and meaning is often assigned to symbols in a much
+more subtle way. Consequently, previous research [
+   </span>
+   <a href="#eb1ca419" id="0b21f0db">
+    <span id="c2b65010">
+     19
+    </span>
+   </a>
+   <span id="7e2b1875">
+    ,
+   </span>
+   <a href="#5a67d4f1" id="8eb7bc66">
+    <span id="b5bf1561">
+     15
+    </span>
+   </a>
+   <span id="c5358914">
+    ,
+   </span>
+   <a href="#22029494" id="bb083136">
+    <span id="0c0a08f5">
+     2
+    </span>
+   </a>
+   <span id="0015aee9">
+    ] has demonstrated that machine learning techniques are
+more helpful than simple pattern matching techniques. In our work we aim
+to train a classifier for definitions based on a large ground truth set.
+In order to construct the latter we have assembled an annotation tool
+that presents the concordance analysis of a corpus of pre-processed
+documents which can be manually annotated to extract valid mathematical
+definitions. In this abstract we present the basic principles of the
+analysis and the functioning of the annotation tool.
+   </span>
+  </p>
+  <h1 id="630d0ee4">
+   <span id="4abb2d95">
+    2 Semantic Context Analysis
+   </span>
+  </h1>
+  <p>
+   <span id="713a54dc">
+    The true meaning of mathematical symbols can only
+rarely be deduced by their occurrence in a single formula alone. And
+although many commonly used mathematical symbols often have widely
+understood semantics, their meaning in context of a particular
+mathematical text might differ considerably. For example, while in
+non-associative algebra structures like rings use addition and
+multiplication symbols, their meaning must not be confused with their
+counter parts in traditional arithmetic.
+   </span>
+  </p>
+  <p>
+   <span id="6c35f8ff">
+    Lack of contextual semantic leads to two types of
+ambiguities &mdash;
+   </span>
+  </p>
+  <ol type="1">
+   <li>
+    <span id="6fa1ccb1">
+     Lexical ambiguity &mdash; A symbol can have different
+meaning on the basis of the context. e.g., &delta; can be mapped to
+KroneckerDelta, DiracDelta, DiscreteDelta, or &delta;.
+    </span>
+   </li>
+   <li>
+    <span id="c6676772">
+     Characteristical ambiguity -&ndash; An expression can
+have different interpretation based on the characteristics of a symbol,
+even after having the same lexical meaning. e.g., w&minus;1 can be an inverse
+function or 1/w depending on whether the symbol w is a function or a
+variable, respectively. Here, even though the lexical meaning of w and
+&minus;1 is same in both the scenarios. Still, the expression w&minus;1 has a
+completely different interpretation based on whether w is a function or
+a variable. In the former case,w&minus;1 means the inverse function, in the
+latter w&minus;1 means &rdquo;1 divided by w
+    </span>
+   </li>
+  </ol>
+  <p>
+   <span id="d515401f">
+    We can roughly divide the sources from which a
+given symbol or expression can get its definition in a document into
+three scenarios:
+   </span>
+  </p>
+  <ul>
+   <li>
+    <span id="23bd453e">
+     Scenario 1: The symbol is never defined within
+the document, but is well understood in general or in the subject domain
+the document belongs (e.g., the equality sign or the normal subgroup
+sign in Group theory). Note here there is some implicit assumption about
+the audio rendering system already having default meaning of symbols for
+every domain.
+    </span>
+   </li>
+   <li>
+    <span id="1ffdeffd">
+     Scenario 2: The symbol is defined once within
+the document and is expected to carry that meaning throughout the
+document.
+    </span>
+   </li>
+   <li>
+    <span id="a33ac50b">
+     Scenario 3: The same symbol is defined multiple
+times within the document and is expected to carry that meaning only
+within the scope of those definitions. In this case, it is also
+necessary to determine the scope of each definition and thus tailor the
+rendering accordingly.
+    </span>
+   </li>
+  </ul>
+  <p>
+   <span id="c691c34b">
+    Scenario (1) requires the identification of
+subjects domains having different semantics and creation of default
+symbol mappings for each domain. To some extent, this exists for certain
+topics, e.g., Wikipage [
+   </span>
+   <a href="#53123d71" id="268358f0">
+    <span id="c98e58c4">
+     1
+    </span>
+   </a>
+   <span id="9bbd920d">
+    ] provides a detailed
+list of definitions of mathematical symbols in a small number of
+different subjects. While reading a document dealing with probabilities,
+reading P (A) as &ldquo;Probability of event A&rdquo; is critical for understanding
+the equation instead of &ldquo;P OpenParen A CloseParen&rdquo;. One could naively
+enforce an interpretation of P as probability or allow for explicit
+selection of the domain. But even if the subject domain is explicitly
+known to be probability theory, a default interpretation for P as
+probability might not necessarily be correct, as P could for example
+also denote a polynomial or a partition. Therefore, a dynamic approach
+should be more robust.
+   </span>
+  </p>
+  <p>
+   <span id="0c6835a9">
+    In our work, we are therefore focusing on the
+semantic information, which can be learned from the document itself; no
+prior domain knowledge is required. Hence, this work covers the
+scenarios (2) and (3) in the above list.
+   </span>
+  </p>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+3
+     </span>
+    </span>
+   </h6>
+  </section>
+  <p>
+   <span id="6f0ccd49">
+    In the past, there have been few attempts in this
+area: it has been shown previously [
+   </span>
+   <a href="#c5ab63cc" id="8d9ac914">
+    <span id="432a27b7">
+     17
+    </span>
+   </a>
+   <span id="0f3d9078">
+    ,
+   </span>
+   <a href="#eb1ca419" id="c5af41f1">
+    <span id="1b50914e">
+     19
+    </span>
+   </a>
+   <span id="9ca0551f">
+    ,
+   </span>
+   <a href="#997c05e8" id="49a2a225">
+    <span id="305b3a88">
+     10
+    </span>
+   </a>
+   <span id="cebf0c2f">
+    ,
+   </span>
+   <a href="#5a67d4f1" id="d2b4e60c">
+    <span id="8bc6fdd8">
+     15
+    </span>
+   </a>
+   <span id="0c234f4f">
+    ,
+   </span>
+   <a href="#22029494" id="17d436b2">
+    <span id="53615013">
+     2
+    </span>
+   </a>
+   <span id="7eb824a2">
+    ]
+that the consideration of surrounding text can relatively improve the
+performance of semantic disambiguation in comparison with a mere
+expression analysis [
+   </span>
+   <a href="#8369c167" id="55bf8191">
+    <span id="ff43b8d2">
+     16
+    </span>
+   </a>
+   <span id="7a7fc453">
+    ,
+   </span>
+   <a href="#a03dd665" id="bb6a63e4">
+    <span id="b3476f49">
+     7
+    </span>
+   </a>
+   <span id="2d49a75a">
+    ,
+   </span>
+   <a href="#da712c35" id="63427164">
+    <span id="ca9da513">
+     11
+    </span>
+   </a>
+   <span id="27f2ec68">
+    ]. But it has also been
+demonstrated [
+   </span>
+   <a href="#eb1ca419" id="d2051d4d">
+    <span id="16257150">
+     19
+    </span>
+   </a>
+   <span id="078111d7">
+    ] that machine learning
+based approaches can provide better results in comparison to simple
+pattern matching based methods. We therefore follow a machine learning
+approach for inferring mathematical definitions automatically from the
+document using a classifier-cum-locator. In particular we aim to extend
+work from [
+   </span>
+   <a href="#22029494" id="23ed2a7b">
+    <span id="7cd56bd7">
+     2
+    </span>
+   </a>
+   <span id="f0da8550">
+    ] to train a classifier
+on the basis of a large ground truth set of definitions obtained from a
+concordance analysis, following a methodology that is outlined by these
+steps:
+   </span>
+  </p>
+  <ul>
+   <li>
+    <span id="08864e11">
+     Identifying mathematical symbols definitions:
+This requires the identification of the concordances which define the
+definitions of the mathematical symbols in the document. We achieved it
+by creating an efficient annotation tool (described in section
+    </span>
+    <a href="#c70ca910" id="e6de241a">
+     <span id="7a8919e1">
+      4
+     </span>
+    </a>
+    <span id="0deaca03">
+     ). This is helping us in effectively annotating a
+large corpus to create the ground truth.
+    </span>
+   </li>
+   <li>
+    <span id="fad659f9">
+     Classifier: Developing a machine learning based
+classification algorithm. This will be trained on the ground truth
+created using the above annotation tool. This will help us in
+identifying whether the given concordance contains the mathematical
+definition or not. This is described in section
+    </span>
+    <a href="#d63d4bc1" id="27e63104">
+     <span id="c0bafb30">
+      6
+     </span>
+    </a>
+    <span id="222fec95">
+     .
+    </span>
+   </li>
+   <li>
+    <span id="0feb6ec6">
+     Identifying the scope of these definitions: To
+distinguish between the above mentioned scenarios (2) and (3), it needs
+to be inferred whether the given definition&rsquo;s scope is local or global.
+We plan to achieve it by checking whether a particular expression/symbol
+has multiple different definitions in the given document and associating
+the occurrence of that particular expression/symbol to an immediately
+preceding definition. By default, the expression/symbol would be mapped
+to the lexical meaning. After working on the scenario (1), it can be
+mapped to the default meaning associated with the subject.
+    </span>
+   </li>
+  </ul>
+  <h1 id="814c926a">
+   <span id="41d1647b">
+    3 Concordance Analysis
+   </span>
+  </h1>
+  <p>
+   <span id="7067742b">
+    Our machine learning approach is based on a
+concordance analysis, that is on a enumeration of all expressions in
+question together with the context in which they occur. In our case, we
+are working with mathematical expressions and as context we take up to
+five words or expressions before and after the principal expression.
+   </span>
+  </p>
+  <p>
+   <span id="86da477a">
+    Table
+   </span>
+   <a href="#78e985cf" id="b90e5f05">
+    <span id="1e6b4dc8">
+     1
+    </span>
+   </a>
+   <span id="f986f375">
+    contains a number of examples of concordances, where the
+principal mathematical expression is marked in red. Note, that single
+mathematical expressions are counted as a single element of the
+concordance, regardless of the number of symbols they contain. Moreover,
+while the principal is usually in the center, this can be broken up by
+paragraph making concordance pre-or postfixes shorter than five
+expressions/words.
+   </span>
+  </p>
+  <p>
+   <span id="cb04eafb">
+    Obviously not every concordance constitutes a
+definition of a mathematical expression. Table
+   </span>
+   <a href="#78e985cf" id="74278c91">
+    <span id="3ca2f60f">
+     1
+    </span>
+   </a>
+   <span id="8b809694">
+    contains examples of both together with an explanation why
+or why not a concordance can be seen as a definition. As a consequence
+it is necessary to build a ground truth by manually tagging of
+concordances as to whether they contain a definition or not.
+   </span>
+  </p>
+  <h1 id="fd073638">
+   <span id="c70ca910">
+    4 Annotation Tool and Ground Truth
+   </span>
+  </h1>
+  <p>
+   <span id="784e53b2">
+    To generate the ground truth we need to annotate
+the concordances manually by several independent annotators. Although
+there are a number of tools for concordance analysis and corpus
+annotations available, none can adequately deal with documents
+containing considerable amount of mathematics. We have consequently
+developed an annotation tool with the objective to provide an efficient
+way for annotating the concordances having and not having a valid
+mathematical definition.
+   </span>
+  </p>
+  <p>
+   <span id="79bab05a">
+    For this, we took around 100 XML documents from
+various domains of STEM. In these documents, the tool first identifies
+the mathematical entities (maybe a symbol or expression). As in general
+on the web, we found documents which are not appropriately tagged.
+Hence, the tool searches for various tags such as MathML, bold, and
+italic, and also look for the LATEX expressions. The tool searches for
+bold and italic because many of the times authors tagged the
+mathematical entities by bold/italic to give the same visual appearance.
+The average number of entities identified in the documents are 1052.644,
+having max of 3046 and min of 252 and standard deviation of 586.2051.
+   </span>
+  </p>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+4
+     </span>
+    </span>
+   </h6>
+  </section>
+  <table class="table-default" id="b7340bb5">
+   <colgroup>
+    <col style="width: 33%"/>
+    <col style="width: 33%"/>
+    <col style="width: 33%"/>
+   </colgroup>
+   <thead>
+    <tr class="header">
+     <th id="2e1ad567">
+      <p>
+       <span id="5e84d7df">
+        Concordance
+       </span>
+      </p>
+     </th>
+     <th id="dc63695a">
+      <p>
+       <span id="3b19f5ef">
+        Definition (Yes/No)
+       </span>
+      </p>
+     </th>
+     <th id="57e567d3">
+      <p>
+       <span id="b2f8b248">
+        Explanation
+       </span>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr class="odd">
+     <td id="83d336ea">
+      <p>
+       <span id="aad39796">
+        We present, in dimension n &ge; 2,
+a survey of samples to:
+       </span>
+      </p>
+     </td>
+     <td id="499da40a">
+      <p>
+       <span id="e6d240af">
+        Yes
+       </span>
+      </p>
+     </td>
+     <td id="324d9c59">
+      <p>
+       <span id="82eb0021">
+        n is a dimension.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="2a1f06af">
+      <p>
+       <span id="e88251de">
+        ensuring that an equilibrium
+point x &lowast; is a local attractor is
+       </span>
+      </p>
+     </td>
+     <td id="ec08576e">
+      <p>
+       <span id="e6d240af">
+        Yes
+       </span>
+      </p>
+     </td>
+     <td id="ff0f152b">
+      <ul>
+       <li>
+       </li>
+      </ul>
+      <p>
+       <span id="fb7f23ea">
+        x is a point.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="cdad5f0b">
+      <p>
+       <span id="0aa9db36">
+        F : Rn &rarr; Rn satisfying that for
+any x &isin; Rn , all the eigenvalues of JF(x)
+       </span>
+      </p>
+     </td>
+     <td id="ce1e826e">
+      <p>
+       <span id="e6d240af">
+        Yes
+       </span>
+      </p>
+     </td>
+     <td id="8ba5dfba">
+      <p>
+       <span id="351ee18c">
+        x represents eigenvalues.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="3e778081">
+      <p>
+       <span id="87ec1481">
+        n &lt; 2 and non-injective
+polynomial maps f : Rn &rarr; Rn with [0,&infin;) &cap; Spec(Jf(x)) = 0, for all x &isin;
+Rn&rdquo;.
+       </span>
+      </p>
+     </td>
+     <td id="a9510514">
+      <p>
+       <span id="e6d240af">
+        Yes
+       </span>
+      </p>
+     </td>
+     <td id="40e5a5bd">
+      <p>
+       <span id="9a6f5716">
+        f is a non-injective polynomial
+map.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="7a05eaf1">
+      <p>
+       <span id="d7b2d3a5">
+        that the C1-vector fields F :
+Rn &rarr; Rn satisfying that for any x &isin; Rn
+       </span>
+      </p>
+     </td>
+     <td id="ccb86e51">
+      <p>
+       <span id="e6d240af">
+        Yes
+       </span>
+      </p>
+     </td>
+     <td id="c8b57211">
+      <p>
+       <span id="93a0e5b7">
+        F is a C1-vector field.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="467b701b">
+      <p>
+       <span id="2eaf9084">
+        Let us recall that the
+C1-vector fields F : Rn &rarr; Rn satisfying that for any x &isin; Rn
+       </span>
+      </p>
+     </td>
+     <td id="06da0de3">
+      <p>
+       <span id="85cdebe1">
+        No
+       </span>
+      </p>
+     </td>
+     <td id="37187553">
+      <p>
+       <span id="54c9305c">
+        This is not a definition of C1
+.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="c8a35677">
+      <p>
+       <span id="bf6a7edd">
+        JF(x), the Jacobian matrix of F
+at x, has negative real
+       </span>
+      </p>
+     </td>
+     <td id="4c326ab1">
+      <p>
+       <span id="85cdebe1">
+        No
+       </span>
+      </p>
+     </td>
+     <td id="341bdd38">
+      <p>
+       <span id="c9824c6f">
+        The definition of F is not
+given; even though you can infer that F is a function, this is not
+explicit in this concordance.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="4a5ccd2c">
+      <p>
+       <span id="7d1af6e4">
+        restricted to the invariant
+plane z = 0 is a center. Moreover, perturbing
+       </span>
+      </p>
+     </td>
+     <td id="11740668">
+      <p>
+       <span id="85cdebe1">
+        No
+       </span>
+      </p>
+     </td>
+     <td id="58ae3923">
+      <p>
+       <span id="941d1860">
+        Even though z = 0 is a plane is
+defined in this concordance. Still, to infer that z is a dimension, you
+requires the prior domain knowledge. That&rsquo;s why it is not a valid
+mathematical definition. Here, we are only looking for the concordances
+which has the proper definition of the symbol within the concordance.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="9fff4ea2">
+      <p>
+       <span id="1102428a">
+        construct polynomial maps F =
+&lambda;I + H : R3 &rarr; R3 with JH nilpotent, such that the WMYC
+       </span>
+      </p>
+     </td>
+     <td id="68b021b2">
+      <p>
+       <span id="85cdebe1">
+        No
+       </span>
+      </p>
+     </td>
+     <td id="fef05834">
+      <p>
+       <span id="8e8916ae">
+        This is not a definition of JH.
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="b864706a">
+      <p>
+       <span id="606ad182">
+        the MYC is true when n &le; 2 and
+false when n &ge; 3 (see
+       </span>
+      </p>
+     </td>
+     <td id="9b27d92b">
+      <p>
+       <span id="85cdebe1">
+        No
+       </span>
+      </p>
+     </td>
+     <td id="78289927">
+      <p>
+       <span id="e2aa3608">
+        This is not a definition of n.
+       </span>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <span id="78e985cf">
+    Table 1: Some sample concordances containing and
+not containing valid mathematical definitions. The principal
+mathematical expression is marked with red color in above concordances.
+   </span>
+  </p>
+  <p>
+   <span id="663cb980">
+    Corresponding to each identified entity, five
+previous and five next words are highlighted (as shown in Figure
+   </span>
+   <a href="#dc6db3d5" id="e647ff2f">
+    <span id="cd1c614b">
+     1
+    </span>
+   </a>
+   <span id="8690db8d">
+    ). This whole highlighted part, including
+the central mathematical entity is referred to as concordance in this
+paper. The person who is annotating the concordances needs to press &rarr;
+(right arrow) or &larr; (left arrow) to mark the highlighted concordance as a
+valid or not a valid mathematical definition, respectively. To provide
+the assurance, on pressing the right-arrow/left-arrow the background
+colour gets changed to blue or red, respectively (as shown in Figure
+   </span>
+   <a href="#edc25130" id="504a3544">
+    <span id="323db628">
+     2
+    </span>
+   </a>
+   <span id="7a02e903">
+    and
+   </span>
+   <a href="#847f952b" id="af187609">
+    <span id="970d9fa3">
+     3
+    </span>
+   </a>
+   <span id="e9b56df1">
+    ,
+respectively.). The tool also provides an option to mark error in
+concordance identification/highlighting by pressing the key &ldquo;e&rdquo; (Figure
+   </span>
+   <a href="#25ad9e87" id="6701041a">
+    <span id="0f80fb59">
+     4
+    </span>
+   </a>
+   <span id="408a91da">
+    ). The navigation functionality was
+provided through up/down arrow keys to go to the previous/next
+concordance, respectively. The tool also automatically goes to the next
+concordance after 1 second of marking the currently highlighted
+concordance.
+   </span>
+  </p>
+  <p>
+   <span id="32025c14">
+    This tool allows us to create a large amount of
+ground truth efficiently. The average annotation speed observed is that
+a person can annotate 400 concordances within 30 minutes. Also, the same
+file is annotated by multiple people having a strong background in STEM,
+to remove any personal bias.
+   </span>
+  </p>
+  <h1 id="4c94b1c9">
+   <span id="1edde0d9">
+    5 Data Collection
+   </span>
+  </h1>
+  <p>
+   <span id="04ab2bf0">
+    The present analysis is based on nine files, all
+of them have been annotated by three different annotators. The same file
+was annotated by multiple annotators to avoid the individual biases.
+Final label is decided based on the max approach, detailed rules are
+mentioned in table
+   </span>
+   <a href="#e28d1018" id="1fd66156">
+    <span id="528450e2">
+     2
+    </span>
+   </a>
+   <span id="f4fac16c">
+    . e.g., If two annotators
+have given
+   </span>
+  </p>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+5
+     </span>
+    </span>
+   </h6>
+  </section>
+  <img alt="" id="d2cc5f60" src="data:image/png;base64,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"/>
+  <p>
+   <span id="dc6db3d5">
+    Figure 1: A Screenshot showing a sample
+concordance highlighted by the annotator tool
+   </span>
+  </p>
+  <img alt="" id="a80eea22" src="data:image/png;base64,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"/>
+  <p>
+   <span id="edc25130">
+    Figure 2: A Screenshot showing a sample
+concordance highlighted by the annotator tool after pressing right arrow
+(key for marking as having valid mathematical definition.)
+   </span>
+  </p>
+  <p>
+   <span id="e9d34073">
+    label 1, whereas, one annotator has given the
+label 0, then the final label will be 1. Here, 0 represents &rdquo;doesn&rsquo;t
+contain a valid mathematical definition&rdquo;, 1 represents &rdquo;contains a valid
+mathematical definition&rdquo;, and &minus;1 represents &rdquo;an error&rdquo;. The average
+number of concordances in these files are 619. The total number of
+concordances having final label as 0 and 1 are mentioned in table
+   </span>
+   <a href="#ea631f37" id="f0f7f6b2">
+    <span id="8b0de780">
+     3
+    </span>
+   </a>
+   <span id="5e25c6c3">
+    . We have split this collection into
+training and test set in 80:20 ratio.
+   </span>
+  </p>
+  <table class="table-default" id="ac84a431">
+   <colgroup>
+    <col style="width: 25%"/>
+    <col style="width: 25%"/>
+    <col style="width: 25%"/>
+    <col style="width: 25%"/>
+   </colgroup>
+   <thead>
+    <tr class="header">
+     <th id="0c0d9baf">
+      <p>
+       <span id="89bc8e7c">
+        Label 1
+       </span>
+      </p>
+     </th>
+     <th id="ac71d795">
+      <p>
+       <span id="ec7b9418">
+        Label 2
+       </span>
+      </p>
+     </th>
+     <th id="ec15a26e">
+      <p>
+       <span id="9d262589">
+        Label 3
+       </span>
+      </p>
+     </th>
+     <th id="d70e7094">
+      <p>
+       <span id="7fbe9f9f">
+        Final Label
+       </span>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr class="odd">
+     <td id="19734b2a">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="8489a2c5">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="13cdc15a">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="c515888d">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="80bac87c">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="b2461d38">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="66cca0cf">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="3c2dab52">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="17d75240">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="1b3606f9">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="0df2a2d4">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="60b57d31">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="34b39245">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="21a3cabb">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="00dec463">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="00042b35">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="45136dae">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="e423a399">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="3d0033d8">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="e6c2482c">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="33874a3b">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="c7caf106">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="6cdddfa2">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="7e08a0c7">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="9d584dcf">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="c27c8dc6">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="6102da9f">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="5e19b212">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="8d526436">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="7cf143cd">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="b0ee90c0">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="b713d2b3">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="51edb471">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="e35e05d5">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+     <td id="5598aa0b">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="43b96120">
+      <p>
+       <span id="231217dc">
+        -1
+       </span>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <span id="e28d1018">
+    Table 2: Rules for final label based on the
+labels from different annotators. Here, 0 represents &rdquo;doesn&rsquo;t contain a
+valid mathematical definition&rdquo;, 1 represents &rdquo;contains a valid
+mathematical definition&rdquo;, and &minus;1 represents &rdquo;an error&rdquo;.
+   </span>
+  </p>
+  <table class="table-default" id="7f18ba67">
+   <colgroup>
+    <col style="width: 50%"/>
+    <col style="width: 50%"/>
+   </colgroup>
+   <thead>
+    <tr class="header">
+     <th id="2c2a3f12">
+      <p>
+       <span id="f02f9f7e">
+        Label
+       </span>
+      </p>
+     </th>
+     <th id="d46da186">
+      <p>
+       <span id="f61a43ec">
+        Total Number
+       </span>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr class="odd">
+     <td id="8f99b698">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="5ba13620">
+      <p>
+       <span id="cabd3b62">
+        892
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="25e0d441">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="c8d12848">
+      <p>
+       <span id="e3e7a734">
+        4199
+       </span>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <span id="ea631f37">
+    Table 3: The total number of concordances having
+final label as 0 and 1.
+   </span>
+  </p>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+6
+     </span>
+    </span>
+   </h6>
+  </section>
+  <img alt="" id="fef01845" src="data:image/png;base64,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"/>
+  <p>
+   <span id="847f952b">
+    Figure 3: A Screenshot showing a sample
+concordance highlighted by the annotator tool after pressing left arrow
+(key for marking as not having a valid mathematical definition.)
+   </span>
+  </p>
+  <img alt="" id="d1c3907b" src="data:image/png;base64,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"/>
+  <p>
+   <span id="d2d58684">
+    ;
+   </span>
+  </p>
+  <p>
+   <span id="25ad9e87">
+    Figure 4: A Screenshot showing a concordance for
+an erroneously identified element.
+   </span>
+  </p>
+  <h1 id="e0375993">
+   <span id="d63d4bc1">
+    6 Classifier
+   </span>
+  </h1>
+  <p>
+   <span id="edfb2d8f">
+    As a baseline classifier, we have considered
+Naive Bayes and SVM. The concordance pre-processing requires removing
+punctuations and stopwords, using NLTK library, and replacing
+mathematical symbols/expressions with keyword &rdquo;MATH&rdquo;. Table
+   </span>
+   <a href="#d3834a87" id="b087ec40">
+    <span id="ff38f4d6">
+     4
+    </span>
+   </a>
+   <span id="9b93b70d">
+    shows some sample concordances after replacing
+mathematical sym-bols/expressions by the keyword &rdquo;MATH&rdquo;. Each
+concordance is vectorized using term frequency and inverse document
+frequency, abbreviated as tf-dif. We have used uni-grams as well as
+bi-grams and taken logarithm of their term-frequency. The SVM, from
+library sickit-learn, is trained with early-stopping and uses 20% of the
+training data as validation set. We have used the same tf-idf based
+feature vector for SVM as well. As evident from the table
+   </span>
+   <a href="#f38d1d76" id="a758a617">
+    <span id="dd660da0">
+     5
+    </span>
+   </a>
+   <span id="20d2f6a7">
+    and
+   </span>
+   <a href="#a88a2f74" id="4acf4939">
+    <span id="fa51c0a9">
+     6
+    </span>
+   </a>
+   <span id="cae1ab20">
+    , SVM provides better
+f1-score and makes for a better choice for a baseline classifier. In
+Future experiment on classifier, we will try to bring in semantics of
+the context window using deep-learning based models to learn embeddings
+for the concordances that might help improve the accuracy and f1-score.
+   </span>
+  </p>
+  <h1 id="91be02d5">
+   <span id="5bd91f1e">
+    7 Conclusion and Future Work
+   </span>
+  </h1>
+  <p>
+   <span id="77cb3bb2">
+    The developed annotation tool is found to be very
+useful in quickly annotating the files for generating ground-truth. Even
+with limited annotations, using a classifier we are able to achieve an
+accuracy of 85% and f1-score of 0.70. SVM with early-stopping is found
+to be a better choice for baseline classifier.
+   </span>
+  </p>
+  <p>
+   <span id="ce1ef9f5">
+    Further, We are exploring the possibility of more
+meaningful replacement of mathematical symbols/expressions for
+tokenization. We also want to explore how we can use these definitions
+for semantic disambiguation of the mathematical symbols. We are also
+analyzing whether the current choice of five previous and next words is
+&rdquo;appropriate and effective&rdquo; or it needs to be changed. Finally, we want
+to identify each mathematical definition&rsquo;s scope to determine whether
+this is a local or global definition.
+   </span>
+  </p>
+  <h1 id="d84866eb">
+   <span id="da48f93b">
+    Acknowledgement
+   </span>
+  </h1>
+  <p>
+   <span id="fefb4481">
+    We would like to thank Mark Lee for his valuable
+inputs. This project is funded under the SPARC (Scheme for Promotion of
+Academic Research Collaboration), Ministry of Education, Govt. of India.
+MathJax work was supported in part by Simons Foundation Grant,
+No.514521.
+   </span>
+  </p>
+  <section class="pg_no" id="pg_no">
+   <h6>
+    <span class="pg_no" id="pg_no">
+     <span class="pg_no" id="pg_no">
+      Page
+7
+     </span>
+    </span>
+   </h6>
+  </section>
+  <p>
+   <span id="dfd1274f">
+    Concordance Tokens We present, in dimension n&ge;2,
+a survey of samples We present, in dimension MATH , a survey of sam- to:
+ples to: ensuring that an equilibrium point x&lowast; is a local at- ensuring
+that an equilibrium point MATH is a local tractor is attractor is F :Rn
+&rarr;Rn satisfying that for any x&isin;Rn, all the
+MATHsatisfyingthatforanyMATH,alltheeigen- eigenvalues of JF(x) values of
+MATH n &lt; 2 and non-injective polynomial maps f : Rn &rarr; MATH and
+non-injective polynomial maps MATH Rn with [0,&infin;)&cap;Spec(Jf(x))=0, for all
+x&isin;Rn&rdquo;. with MATH, for all MATH&rdquo;. that the C1-vector fields F : Rn &rarr; Rn
+satisfying that the MATH -vector fields MATH satisfying that that for
+any x&isin;Rn for any MATH Let us recall that the C1-vector fields F : Rn &rarr;
+Rn Let us recall that the MATH -vector fields MATH satisfying that for
+any x&isin;Rn satisfying that for any MATH JF(x), the Jacobian matrix of F at
+x, has negative MATH, the Jacobian matrix of MATH at MATH, real has
+negative real restricted to the invariant plane z = 0 is a center.
+restricted to the invariant plane MATH is a center. Moreover, perturbing
+Moreover, perturbing construct polynomial maps F = &lambda;I +H : R3 &rarr; R3
+construct polynomial maps MATH with MATH with JH nilpotent, such that
+the WMYC nilpotent, such that the WMYC the MYC is true when n &le; 2 and
+false when n &ge; 3 theMYCistruewhenMATHandfalsewhenMATH (see (see
+   </span>
+  </p>
+  <p>
+   <span id="d3834a87">
+    Table 4: Tokenized form of sample concordances
+after replacing mathematical symbols/expressions with the keyword
+&rdquo;MATH&rdquo;.
+   </span>
+  </p>
+  <table class="table-default" id="dae3b546">
+   <colgroup>
+    <col style="width: 33%"/>
+    <col style="width: 33%"/>
+    <col style="width: 33%"/>
+   </colgroup>
+   <tbody>
+    <tr class="odd">
+     <td id="f5adb4bb">
+     </td>
+     <td id="804ed2e6">
+      <p>
+       <span id="87d4bde5">
+        Naive Bayes
+       </span>
+      </p>
+     </td>
+     <td id="c5d7f6eb">
+      <p>
+       <span id="b7778cd7">
+        SVM
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="a24b713b">
+      <p>
+       <span id="3cdccad2">
+        Accuracy
+       </span>
+      </p>
+     </td>
+     <td id="f12184de">
+      <p>
+       <span id="a9df07ab">
+        0.841
+       </span>
+      </p>
+     </td>
+     <td id="2fb72d49">
+      <p>
+       <span id="61769f55">
+        0.852
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="b0cc9ead">
+      <p>
+       <span id="58323d92">
+        f1-score
+       </span>
+      </p>
+     </td>
+     <td id="ef1ed464">
+      <p>
+       <span id="eda2b16f">
+        0.652
+       </span>
+      </p>
+     </td>
+     <td id="4c3dcbb6">
+      <p>
+       <span id="7d0a47f9">
+        0.702
+       </span>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <span id="f38d1d76">
+    Table 5: Accuracy and f1-score of base classifier
+based on the Naive Bayes and SVM.
+   </span>
+  </p>
+  <table class="table-default" id="b9750314">
+   <colgroup>
+    <col style="width: 20%"/>
+    <col style="width: 20%"/>
+    <col style="width: 20%"/>
+    <col style="width: 20%"/>
+    <col style="width: 20%"/>
+   </colgroup>
+   <tbody>
+    <tr class="odd">
+     <td id="9b6ca41b">
+     </td>
+     <td colspan="2" id="f3612100">
+      <p>
+       <span id="87d4bde5">
+        Naive Bayes
+       </span>
+      </p>
+     </td>
+     <td colspan="2" id="f6c68942">
+      <p>
+       <span id="b7778cd7">
+        SVM
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="9688ca1c">
+     </td>
+     <td id="9ee29a18">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="4800d846">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="e0996654">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="fb5b1640">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="odd">
+     <td id="de61ac88">
+      <p>
+       <span id="d9195bed">
+        1
+       </span>
+      </p>
+     </td>
+     <td id="2efa1ea9">
+      <p>
+       <span id="55f89877">
+        53
+       </span>
+      </p>
+     </td>
+     <td id="99248529">
+      <p>
+       <span id="35639299">
+        126
+       </span>
+      </p>
+     </td>
+     <td id="cc44c66e">
+      <p>
+       <span id="4c63b1d9">
+        72
+       </span>
+      </p>
+     </td>
+     <td id="067dd53f">
+      <p>
+       <span id="fd7198c5">
+        107
+       </span>
+      </p>
+     </td>
+    </tr>
+    <tr class="even">
+     <td id="ac510b2c">
+      <p>
+       <span id="1ee9183b">
+        0
+       </span>
+      </p>
+     </td>
+     <td id="d659c86c">
+      <p>
+       <span id="dd12e87a">
+        36
+       </span>
+      </p>
+     </td>
+     <td id="1d583d4b">
+      <p>
+       <span id="9d162be8">
+        804
+       </span>
+      </p>
+     </td>
+     <td id="e28eafe0">
+      <p>
+       <span id="69549562">
+        43
+       </span>
+      </p>
+     </td>
+     <td id="b81ba24c">
+      <p>
+       <span id="f34e9aa2">
+        797
+       </span>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <span id="a88a2f74">
+    Table 6: Confusion Matrices
+   </span>
+  </p>
+  <h1 id="27bb0add">
+   <span id="b1e972f8">
+    References
+   </span>
+  </h1>
+  <ol type="1">
+   <li>
+    <span id="53123d71">
+     List of mathematical symbols by subject.
+    </span>
+    <a href="https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject" id="e3e88c0c">
+     <span id="ff104999">
+      by_subject, 2020.
+     </span>
+    </a>
+   </li>
+   <li>
+    <span id="22029494">
+     R. Almomen. Context classification for improved
+semantic understanding of mathematical formulae. PhD thesis, University
+of Birmingham, 2018.
+    </span>
+   </li>
+   <li>
+    <span id="b6ca0359">
+     A. Bansal, M. Balakrishnan, and V. Sorge.
+Comprehensive accessibility of equations by visually impaired. ACM
+SIGACCESS Accessibility and Computing, (126):1&ndash;1, 2020.
+    </span>
+   </li>
+   <li>
+    <span id="7bfd1885">
+     A. Bansal, M. Balakrishnan, and V. Sorge.
+Evaluating cognitive complexity of algebraic equations. In Journal on
+Technology &amp; Persons with Disabilities, page (to appear). CSUN,
+2021.
+    </span>
+   </li>
+   <li>
+    <span id="38958ee1">
+     D. Cervone, P. Krautzberger, and V. Sorge. New
+accessibility features in mathjax. In 31th Annual International
+Technology and Persons with Disabilities Conference Scientific/Research
+Proceedings. California State University, Northridge., 2016.
+    </span>
+   </li>
+   <li>
+    <span id="2f3034bf">
+     D. Cervone, P. Krautzberger, and V. Sorge.
+Towards universal rendering in mathjax. In Proceedings of the 13th Web
+for All Conference, page 4. ACM, 2016.
+    </span>
+    <div class="pg_no" id="pg_no">
+     <h6>
+      <span class="pg_no" id="pg_no">
+       <span class="pg_no" id="pg_no">
+        Page
+2
+       </span>
+      </span>
+     </h6>
+    </div>
+   </li>
+   <li>
+    <span id="a03dd665">
+     I. A. Doush, F. Alkhateeb, and E. Al Maghayreh.
+Towards meaningful mathematical expressions in e-learning. In
+Proceedings of the 1st International Conference on Intelligent Semantic
+Web-Services and Applications, pages 1&ndash;5, 2010.
+    </span>
+   </li>
+   <li>
+    <span id="3e8d1845">
+     L. Frankel, B. Brownstein, and N. Soiffer.
+Navigable, customizable tts for algebra. In 28th Annual International
+Technology and Persons with Disabilities Conference Scientific/Research
+Proceedings. California State University, Northridge, 2014.
+    </span>
+   </li>
+   <li>
+    <span id="9682948e">
+     T. Kanahori and M. Suzuki. Scientific pdf
+document reader with simple interface for visually impaired people. In
+International Conference on Computers for Handicapped Persons, pages
+48&ndash;52. Springer, 2006.
+    </span>
+   </li>
+   <li>
+    <span id="997c05e8">
+     M.-Q. Nghiem, G. Y. Kristianto, G. Topi ́c, and
+A. Aizawa. A hybrid approach for semantic enrichment of mathml
+mathematical expressions. In International Conference on Intelligent
+Computer Mathematics, pages 278&ndash;287. Springer, 2013.
+    </span>
+   </li>
+   <li>
+    <span id="da712c35">
+     M.-Q. Nghiem, G. Yoko, Y. Matsubayashi, and A.
+Aizawa. Towards mathematical expression understanding.
+    </span>
+   </li>
+   <li>
+    <span id="8f7f470f">
+     N. Soiffer. Mathplayer v2.1: web-based math
+accessibility. In Proceedings of the 9th international ACM SIGACCESS
+conference on Computers and accessibility, pages 257&ndash;258. ACM, 2007.
+    </span>
+   </li>
+   <li>
+    <span id="8674be2a">
+     V. Sorge, M. Balakrishnan, N. Jadhav, A. Bansal,
+and H. Garg. Rule based mathematics extraction and layout analysis of
+pdf documents. In Proceedings of the 4th International Workshop on
+Digitization and E-Inclusion in Mathematics and Science (DEIMS), 2021.
+    </span>
+   </li>
+   <li>
+    <span id="fa011f4a">
+     V. Sorge, A. Bansal, N. M. Jadhav, H. Garg, A.
+Verma, and M. Balakrishnan. Towards generating web-accessible stem
+documents from pdf. In Proceedings of the 17th International Web for All
+Conference, pages 1&ndash;5, 2020.
+    </span>
+   </li>
+   <li>
+    <span id="5a67d4f1">
+     Y. Stathopoulos and S. Teufel. Mathematical
+information retrieval based on type embeddings and query expansion. In
+Proceedings of COLING 2016, the 26th International Conference on
+Computational Linguistics: Technical Papers, pages 2344&ndash;2355, 2016.
+    </span>
+   </li>
+   <li>
+    <span id="8369c167">
+     J. Stuber and M. Van den Brand. Extracting
+mathematical semantics from LATEX documents. In International Workshop
+on Principles and Practice of Semantic Web Reasoning, pages 160&ndash;173.
+Springer, 2003.
+    </span>
+   </li>
+   <li>
+    <span id="c5ab63cc">
+     M. Wolska and M. Grigore. Symbol declarations in
+mathematical writing. 2010.
+    </span>
+   </li>
+   <li>
+    <span id="64239a61">
+     K. Yamaguchi, T. Komada, F. Kawane, and M.
+Suzuki. New features in math accessibility with infty software. In
+International Conference on Computers for Handicapped Persons, pages
+892&ndash;899. Springer, 2008.
+    </span>
+   </li>
+   <li>
+    <span id="eb1ca419">
+     K. Yokoi, M.-Q. Nghiem, Y. Matsubayashi, and A.
+Aizawa. Contextual analysis of mathematical expressions for advanced
+mathematical search. Polibits, (43):81&ndash;86, 2011.
+    </span>
+   </li>
+  </ol>
+  <style>
+   table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+  </style>
+  <script>
+   window.addEventListener("load", () => {
+        var btn1 = document.createElement("button");
+        btn1.textContent = "Toggle Page Numbers";
+        btn1.onclick = toggle_visibility;
+        btn1.setAttribute("accesskey", "p");
+        document.body.prepend(btn1);
+
+
+        function toggle_visibility() {
+            const elements = document.getElementsByClassName("pg_no");
+            for (const e of elements) {
+                e.style.display = e.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+        function BackToSource() {
+            var source = this.id
+            var target = this.getAttribute("href");
+            target = target.replace(target[0], "")
+            console.log(source, target)
+            var element = document.getElementById(target)
+            let btn2 = document.createElement("button");
+            btn2.innerHTML = "↩︎";
+            btn2.onclick = function () {
+                window.location.href = "#" + source.toString();
+                btn2.parentNode.removeChild(btn2);
+            }
+            btn2.setAttribute("accesskey", "z");
+            element.appendChild(btn2);
+        };
+
+        var links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", BackToSource)
+
+        }
+    });
+  </script>
+ </body>
+</html>
