@@ -20,14 +20,14 @@
 IIT Delhi
 ![IIT Delhi logo](resources/logos/IITD_LOGO_RED.png)
 [cse.iitd.ac.in/~akashdeep/](https://www.cse.iitd.ac.in/~akashdeep/)
-[akashdeep@cse.iitd.ac.in](mailto:akashdeep@cse.iitd.ac.in)
+[akashdeep.bansal@iitdalumni.com](mailto:akashdeep.bansal@iitdalumni.com)
 :::
 
 :::Affiliation
-I-Stem
-![I-Stem Logo](resources/logos/Istem.png)
-[istemai.com](https://www.istemai.com/)
-[akashdeep@inclusivestem.org](mailto:akashdeep@inclusivestem.org)
+SaralX
+![SaralX Logo](resources/logos/saralx.png)
+[saralx.app](https://www.saralx.app/)
+[akashdeep@saralx.app](mailto:akashdeep@saralx.app)
 :::
 
 *******************
@@ -139,10 +139,10 @@ PowerPoint
 
 Rectify errors and run through Accessibility Checker
 
-## Demo through I-Stem
+## Demo through SaralX
 
 
-[I-Stem: portal.istemai.com](https://portal.istemai.com/)
+[SaralX: portal.saralx.app](https://portal.saralx.app/)
 <br><br><br>
 Feel free to use any application whichever you find more suitable as per your documents.
 
@@ -151,4 +151,4 @@ Feel free to use any application whichever you find more suitable as per your do
 
 
 In case you have any feedback/suggestion or need any help, please contact me through
-[akashdeep@inclusivestem.org](mailto:akashdeep@inclusivestem.org)
+[akashdeep@saralx.app](mailto:akashdeep@saralx.app)
